@@ -1,0 +1,10 @@
+name: Charities
+form: $/bitpixlimited/dronfest/models/charity/fields.yaml
+modelClass: BitpixLimited\Dronfest\Models\Charity
+defaultRedirect: bitpixlimited/dronfest/charities
+create:
+    redirect: 'bitpixlimited/dronfest/charities/update/:id'
+    redirectClose: bitpixlimited/dronfest/charities
+update:
+    redirect: bitpixlimited/dronfest/charities
+    redirectClose: bitpixlimited/dronfest/charities

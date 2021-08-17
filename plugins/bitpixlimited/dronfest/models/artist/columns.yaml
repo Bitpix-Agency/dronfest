@@ -1,0 +1,25 @@
+columns:
+    id:
+        label: id
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    stage:
+        label: Stage
+        type: text
+        searchable: true
+        sortable: true
+    time:
+        label: Time
+        type: time
+        searchable: true
+        sortable: true
+    updated_at:
+        label: 'Last Updated'
+        type: timesince
+        sortable: true

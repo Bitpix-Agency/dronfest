@@ -1,0 +1,66 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    stage:
+        label: Stage
+        options:
+            'Main Stage': 'Main Stage'
+            'Other Stage': 'Other Stage'
+        showSearch: true
+        span: auto
+        type: dropdown
+    time:
+        label: Time
+        span: auto
+        mode: time
+        type: datepicker
+tabs:
+    fields:
+        body:
+            label: Content
+            size: large
+            span: full
+            type: richeditor
+            tab: Content
+        socials:
+            label: Socials
+            prompt: 'Add new social'
+            style: default
+            span: full
+            type: repeater
+            tab: Socials
+            form:
+                fields:
+                    url:
+                        label: Link
+                        span: auto
+                        type: text
+                    type:
+                        label: Platform
+                        options:
+                            facebook: facebook
+                            youtube: youtube
+                            twitter: twitter
+                            spotify: spotify
+                        showSearch: true
+                        span: auto
+                        type: dropdown
+        image:
+            label: Image
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Media

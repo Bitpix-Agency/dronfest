@@ -1,0 +1,23 @@
+plugin:
+    name: 'bitpixlimited.dronfest::lang.plugin.name'
+    description: 'bitpixlimited.dronfest::lang.plugin.description'
+    author: 'Bitpix Limited'
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    sponsors:
+        label: Sponsors
+        url: bitpixlimited/dronfest/sponsors
+        icon: icon-user
+    main-menu-artists:
+        label: Artists
+        url: bitpixlimited/dronfest/artists
+        icon: icon-user
+    charities:
+        label: Charities
+        url: bitpixlimited/dronfest/charities
+        icon: icon-user
+    main-menu-video:
+        label: Videos
+        url: bitpixlimited/dronfest/videos
+        icon: icon-life-ring

@@ -1,0 +1,150 @@
+url = "/lineup"
+layout = "main-layout"
+title = "Line Up"
+
+[builderList]
+modelClass = "BitpixLimited\Dronfest\Models\Artist"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "time"
+==
+<div class="schedule-section section-padding before-after bg-white">
+	<div class="section-title">
+		<i class="fa fa-clock-o"></i>
+		<h1>Running Order</h1>
+		<h2>Dronfest Line Up</h2>
+	</div>
+	<div class="schedule-text">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.			</p>
+		<a class="btn btn-primary px-4 py-2" data-toggle="collapse" href="#collapseMain" role="button" aria-expanded="false" aria-controls="collapseMainStagelist">
+		    Main Stage
+		  </a>
+		  <a class="btn btn-primary px-4 py-2" data-toggle="collapse" href="#collapseOther" role="button" aria-expanded="false" aria-controls="collapseOtherStageList">
+		    Other Stage
+		  </a>
+	</div>
+	
+	<div class="container">
+        <div class="row schedule-menu">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-2">
+                        <a href="#">Time</a>
+                    </div>
+                    <div class="col-10">
+                        <a href="#">Artist</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-4">
+                        <a href="#">Stage</a>
+                    </div>
+                    <div class="col-8">
+                        <a href="#">Genre</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<ul>
+			<div class="collapse show" id="collapseMain">
+            {% for item in records %}
+			{% if item.stage == 'Main Stage' %}
+			<li class="festival-info ">
+				<div class="row">
+					<div class="col-sm-6 col-md-6">
+						<div class="festival-image">
+							<div class="image-overlay"></div>
+							<img class="img-fluid" src="{{ item.image.path }}" alt="Image">
+							<div class="time">
+								<h1>{{ item.time|date('h:i') }} <span>PM</span></h1>
+							</div>
+						</div>
+						<div class="text-left">
+							<h2>{{ item.name }}</h2>
+							<h5>{{ item.stage }}</h5>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-2">
+						<div class="rock-roll">
+							<h5 class="pull-right">{{ item.stage }} </h5>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="audio-list">
+							<div id="music1" class="player" style="width: 0px; height: 0px;">
+								<img id="jp_poster_0" style="width: 0px; height: 0px; display: none;">
+								<audio id="jp_audio_0" preload="metadata" src="http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3"></audio>
+							</div>
+							<div id="music-1" class="audio">
+								<ul class="controls">
+									<li><a href="javascript:;" class="jp-play" tabindex="1"><i class="fa fa-play-circle-o"></i></a></li>
+									<li><a href="javascript:;" class="jp-pause" tabindex="1" style="display: none;"><i class="fa fa-pause-circle-o" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+							<div class="audio-info">
+								<h5>You are bad boy (5:41)</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			{% endif %}
+			{% endfor %}
+			</div>
+			<div class="collapse" id="collapseOther">
+            {% for item in records %}
+			{% if item.stage == 'Other Stage' %}
+			<li class="festival-info ">
+				<div class="row">
+					<div class="col-sm-6 col-md-6">
+						<div class="festival-image">
+							<div class="image-overlay"></div>
+							<img class="img-fluid" src="{{ item.image.path }}" alt="Image">
+							<div class="time">
+								<h1>{{ item.time|date('h:i') }} <span>PM</span></h1>
+							</div>
+						</div>
+						<div class="text-left">
+							<h2>{{ item.name }}</h2>
+							<h5>{{ item.stage }}</h5>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-2">
+						<div class="rock-roll">
+							<h5 class="pull-right">{{ item.stage }} </h5>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="audio-list">
+							<div id="music1" class="player" style="width: 0px; height: 0px;">
+								<img id="jp_poster_0" style="width: 0px; height: 0px; display: none;">
+								<audio id="jp_audio_0" preload="metadata" src="http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3"></audio>
+							</div>
+							<div id="music-1" class="audio">
+								<ul class="controls">
+									<li><a href="javascript:;" class="jp-play" tabindex="1"><i class="fa fa-play-circle-o"></i></a></li>
+									<li><a href="javascript:;" class="jp-pause" tabindex="1" style="display: none;"><i class="fa fa-pause-circle-o" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+							<div class="audio-info">
+								<h5>You are bad boy (5:41)</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			{% endif %}
+			{% endfor %}
+			</div>
+		</ul>
+		
+	</div>
+</div>

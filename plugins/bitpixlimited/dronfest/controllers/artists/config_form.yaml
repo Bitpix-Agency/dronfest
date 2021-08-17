@@ -1,0 +1,10 @@
+name: Artists
+form: $/bitpixlimited/dronfest/models/artist/fields.yaml
+modelClass: BitpixLimited\Dronfest\Models\Artist
+defaultRedirect: bitpixlimited/dronfest/artists
+create:
+    redirect: 'bitpixlimited/dronfest/artists/update/:id'
+    redirectClose: bitpixlimited/dronfest/artists
+update:
+    redirect: bitpixlimited/dronfest/artists
+    redirectClose: bitpixlimited/dronfest/artists

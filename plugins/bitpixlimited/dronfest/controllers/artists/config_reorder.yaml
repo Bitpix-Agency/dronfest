@@ -1,0 +1,4 @@
+title: Artists
+modelClass: BitpixLimited\Dronfest\Models\Artist
+toolbar:
+    buttons: reorder_toolbar

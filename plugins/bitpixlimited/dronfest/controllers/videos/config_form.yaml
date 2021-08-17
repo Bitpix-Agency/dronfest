@@ -1,0 +1,10 @@
+name: Videos
+form: $/bitpixlimited/dronfest/models/video/fields.yaml
+modelClass: BitpixLimited\Dronfest\Models\Video
+defaultRedirect: bitpixlimited/dronfest/videos
+create:
+    redirect: 'bitpixlimited/dronfest/videos/update/:id'
+    redirectClose: bitpixlimited/dronfest/videos
+update:
+    redirect: bitpixlimited/dronfest/videos
+    redirectClose: bitpixlimited/dronfest/videos

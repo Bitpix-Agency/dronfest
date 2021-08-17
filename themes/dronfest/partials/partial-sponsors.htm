@@ -1,0 +1,25 @@
+[builderList]
+modelClass = "BitpixLimited\Dronfest\Models\Sponsor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No sponsors found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<div class="clients-section section-padding before-after bg-white">
+    <div class="section-title">
+        <h1>Support us</h1>
+        <h2>Our sponsors</h2>
+    </div>
+    <div class="container">
+        <div class="clients-slider">
+            {% for item in records %}
+            <div class="client">
+                <img class="img-fluid" src="{{ item.image.path() }}" alt="Image">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

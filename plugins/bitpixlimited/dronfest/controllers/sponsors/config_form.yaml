@@ -1,0 +1,10 @@
+name: Sponsors
+form: $/bitpixlimited/dronfest/models/sponsor/fields.yaml
+modelClass: BitpixLimited\Dronfest\Models\Sponsor
+defaultRedirect: bitpixlimited/dronfest/sponsors
+create:
+    redirect: 'bitpixlimited/dronfest/sponsors/update/:id'
+    redirectClose: bitpixlimited/dronfest/sponsors
+update:
+    redirect: bitpixlimited/dronfest/sponsors
+    redirectClose: bitpixlimited/dronfest/sponsors

@@ -1,0 +1,19 @@
+fields:
+    name:
+        label: Name
+        span: full
+        type: text
+    url:
+        label: 'Embed Snippet'
+        size: small
+        span: full
+        type: textarea
+    image:
+        label: Image
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

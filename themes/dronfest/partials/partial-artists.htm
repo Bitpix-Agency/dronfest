@@ -1,0 +1,42 @@
+[builderList]
+modelClass = "BitpixLimited\Dronfest\Models\Artist"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+==
+<div class="artists-section section-padding before-after bg-white">
+    <div class="section-title">
+        <h1>Meet The Artists</h1>
+        <h2>Dronfest Performers</h2>
+    </div>
+    <div class="artists-content">
+        <div class="container">
+            <div class="row">
+            {% for item in records | slice (0,8)%}
+                <div class="col-lg-3 col-md-6">
+                    <div class="artists holder" style="background-image:url({{ item.image.path() }})">
+                        <div class="artists-overlay"></div>
+                        <div class="artists-info">
+                            <ul class="list-inline">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                            <a href="performer-details.html">{{ item.name }}</a>
+                            <h6>{{ item.stage }}</h6>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="button">
+                <a href="/lineup" class="btn btn-primary">See all artists</a>
+            </div>
+        </div>
+    </div>
+</div>

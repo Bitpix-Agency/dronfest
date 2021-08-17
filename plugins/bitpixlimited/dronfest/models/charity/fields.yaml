@@ -1,0 +1,21 @@
+fields:
+    year:
+        label: Year
+        span: auto
+        type: text
+    amount:
+        label: Amount
+        span: auto
+        type: text
+    charities:
+        label: Charities
+        prompt: 'Add new charity'
+        style: default
+        span: full
+        type: repeater
+        form:
+            fields:
+                name:
+                    label: Name
+                    span: full
+                    type: text

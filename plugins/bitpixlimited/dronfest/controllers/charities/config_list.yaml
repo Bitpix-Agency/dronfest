@@ -1,0 +1,12 @@
+list: $/bitpixlimited/dronfest/models/charity/columns.yaml
+modelClass: BitpixLimited\Dronfest\Models\Charity
+title: Charities
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'bitpixlimited/dronfest/charities/update/:id'

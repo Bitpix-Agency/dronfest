@@ -1,0 +1,11 @@
+columns:
+    id:
+        label: id
+        type: text
+        searchable: true
+        sortable: true
+    year:
+        label: Year
+        type: text
+        searchable: true
+        sortable: true

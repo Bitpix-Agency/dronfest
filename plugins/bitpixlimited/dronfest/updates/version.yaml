@@ -1,0 +1,26 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table bitpixlimited_dronfest_sponsors'
+    - builder_table_create_bitpixlimited_dronfest_sponsors.php
+1.0.3:
+    - 'Updated table bitpixlimited_dronfest_sponsors'
+    - builder_table_update_bitpixlimited_dronfest_sponsors.php
+1.0.4:
+    - 'Updated table bitpixlimited_dronfest_sponsors'
+    - builder_table_update_bitpixlimited_dronfest_sponsors_2.php
+1.0.5:
+    - 'Created table bitpixlimited_dronfest_artists'
+    - builder_table_create_bitpixlimited_dronfest_artists.php
+1.0.6:
+    - 'Updated table bitpixlimited_dronfest_artists'
+    - builder_table_update_bitpixlimited_dronfest_artists.php
+1.0.7:
+    - 'Created table bitpixlimited_dronfest_charities'
+    - builder_table_create_bitpixlimited_dronfest_charities.php
+1.0.8:
+    - 'Updated table bitpixlimited_dronfest_artists'
+    - builder_table_update_bitpixlimited_dronfest_artists_2.php
+1.0.9:
+    - 'Created table bitpixlimited_dronfest_videos'
+    - builder_table_create_bitpixlimited_dronfest_videos.php

@@ -1,0 +1,41 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog"
+postPage = "blog"
+==
+<div class="blog-section section-padding before-after bg-white">
+    <div class="section-title">
+        <h1>Follow our</h1>
+        <h2>News & updates</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for post in posts %}
+			<div class="col-md-6 col-lg-4">
+				<div class="entry-post">
+					<div class="entry-thumbnail">
+                        {% for image in post.featured_images %}
+						<img class="img-fluid" src="{{ image.path }}" alt="{{ post.title }}">
+                        {% endfor %}
+					</div>
+					<div class="post-content">
+						<div class="time">
+							<a href="#">{{ post.published_at|date('d') }} <span>{{ post.published_at|date('M') }}</span></a>
+						</div>
+						<div class="entry-title">
+							<a href="{{ post.url }}">{{ post.title }}</a>
+						</div>
+						{{ post.summary|raw }}
+						<div class="post-icons">
+							<a href="{{ post.url }}"><i class="fa fa-chevron-circle-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+        </div>
+    </div>
+</div>
