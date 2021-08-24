@@ -105,29 +105,9 @@
                 </ul>
             </div>
         </div>
-        <div class="twitter-feed section-padding before-after bg-white">
-            <div class="container">
-                <div class="section-title">
-                    <i class="fa fa-twitter"></i>
-                    <h1>Follow Us</h1>
-                    <h2>Twitter Feed</h2>
-                </div>
-                <div class="twitter-slider">
-                    <div class="feed-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <h4><a href="#">@ThemeRegion</a> - Jun 13th, 2018</h4>
-                    </div>
-                    <div class="feed-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <h4><a href="#">@ThemeRegion</a> - Jun 13th, 2018</h4>
-                    </div>
-                    <div class="feed-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <h4><a href="#">@ThemeRegion</a> - Jun 13th, 2018</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        {% partial "partial-feed" %}
+
         <div class="contact-section before {% if this.page.title == 'Contact' %} d-none {% endif %}">
             <div id="gmap"></div>
             <div class="contact-info">
